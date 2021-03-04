@@ -13,7 +13,8 @@ WHERE "Order".OrderDate < "2012-08-09";
 SELECT Product.ProductName, OrderDetail.Quantity
 FROM Product
 JOIN OrderDetail ON Product.Id = OrderDetail.ProductId
-WHERE OrderDetail.OrderId = 10251;
+WHERE OrderDetail.OrderId = 10251
+ORDER BY Product.ProductName;
 
 -- Display the OrderID, Customer's Company Name and the employee's LastName for every order. All columns should be labeled clearly. Displays 16,789 records.
 SELECT "Order".Id,Customer.CompanyName, Employee.LastName
